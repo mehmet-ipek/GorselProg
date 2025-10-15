@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GorselProg.ScientificPage"
+             Title="Bilimsel"
+             BackgroundColor="#F3F3F3">
+
+    <ContentPage.Resources>
+        <Style TargetType="Button">
+            <Setter Property="BackgroundColor" Value="#D9D9D9"/>
+            <Setter Property="TextColor" Value="Blue"/>
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="CornerRadius" Value="8"/>
+            <Setter Property="Margin" Value="3"/>
+            <Setter Property="HeightRequest" Value="60"/>
+        </Style>
+    </ContentPage.Resources>
+
+    <Grid Padding="15"
+          RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto"
+          ColumnDefinitions="*,*,*,*">
+
+        
+        <Label x:Name="lblHistorySci"
+               Grid.Row="0" Grid.ColumnSpan="4"
+               Text=""
+               TextColor="Gray"
+               FontSize="16"
+               HorizontalTextAlignment="End"
+               VerticalTextAlignment="End"
+               Margin="0,5,0,0"/>
+
+       
+        <Label x:Name="sciScreen"
+               Grid.Row="1" Grid.ColumnSpan="4"
+               Text="0"
+               FontSize="48"
+               FontAttributes="Bold"
+               BackgroundColor="White"
+               TextColor="Black"
+               HorizontalTextAlignment="End"
+               VerticalTextAlignment="Center"
+               Padding="10"
+               HeightRequest="80"
+               Margin="0,0,0,10"/>
+
+        <Button Grid.Row="2" Grid.Column="0" Text="C" Clicked="Clear_Clicked" />
+        <Button Grid.Row="2" Grid.Column="1" Text="⌫" Clicked="BackSpaceClicked" />
+        <Button Grid.Row="2" Grid.Column="2" Text="√" Clicked="Sqrt_Clicked" />
+        <Button Grid.Row="2" Grid.Column="3" Text="x²" Clicked="Square_Clicked" />
+
+       
+        <Button Grid.Row="3" Grid.Column="0" Text="xʸ" Clicked="Power_Clicked" />
+        <Button Grid.Row="3" Grid.Column="1" Text="log" Clicked="Log_Clicked" />
+        <Button Grid.Row="3" Grid.Column="2" Text="ln" Clicked="Ln_Clicked" />
+        <Button Grid.Row="3" Grid.Column="3" Text="÷" Clicked="Operator_Clicked" />
+
+        
+        <Button Grid.Row="4" Grid.Column="0" Text="sin" Clicked="Sin_Clicked" />
+        <Button Grid.Row="4" Grid.Column="1" Text="cos" Clicked="Cos_Clicked" />
+        <Button Grid.Row="4" Grid.Column="2" Text="tan" Clicked="Tan_Clicked" />
+        <Button Grid.Row="4" Grid.Column="3" Text="×" Clicked="Operator_Clicked" />
+
+     
+        <Button Grid.Row="5" Grid.Column="0" Text="7" Clicked="Num_Clicked" />
+        <Button Grid.Row="5" Grid.Column="1" Text="8" Clicked="Num_Clicked" />
+        <Button Grid.Row="5" Grid.Column="2" Text="9" Clicked="Num_Clicked" />
+        <Button Grid.Row="5" Grid.Column="3" Text="−" Clicked="Operator_Clicked" />
+
+        
+        <Button Grid.Row="6" Grid.Column="0" Text="4" Clicked="Num_Clicked" />
+        <Button Grid.Row="6" Grid.Column="1" Text="5" Clicked="Num_Clicked" />
+        <Button Grid.Row="6" Grid.Column="2" Text="6" Clicked="Num_Clicked" />
+        <Button Grid.Row="6" Grid.Column="3" Text="+" Clicked="Operator_Clicked" />
+
+       
+        <Button Grid.Row="7" Grid.Column="0" Text="1" Clicked="Num_Clicked" />
+        <Button Grid.Row="7" Grid.Column="1" Text="2" Clicked="Num_Clicked" />
+        <Button Grid.Row="7" Grid.Column="2" Text="3" Clicked="Num_Clicked" />
+        <Button Grid.Row="7" Grid.Column="3" Text="=" 
+                BackgroundColor="#3D348B"
+                TextColor="White"
+                FontSize="30"
+                CornerRadius="10"
+                Clicked="Equal_Clicked" />
+
+       
+        <Button Grid.Row="8" Grid.Column="0" Text="+/-" />
+        <Button Grid.Row="8" Grid.Column="1" Text="0" Clicked="Num_Clicked" />
+        <Button Grid.Row="8" Grid.Column="2" Text="." />
+        <Button Grid.Row="8" Grid.Column="3" Text="%" />
+    </Grid>
+</ContentPage>
